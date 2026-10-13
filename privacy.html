@@ -11,11 +11,11 @@
 <nav><a href="./">Wobl</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
 
 <h1>Privacy Policy</h1>
-<p class="date">Wobl · Party Games Offline — last updated 27 July 2026</p>
+<p class="date">Wobl · Party Games Offline — last updated 13 October 2026</p>
 
-<p class="lede">Wobl collects nothing about you. There are no accounts, no analytics, no tracking, no advertising, and no data of yours ever reaches us.</p>
+<p class="lede">Wobl collects nothing about you. There are no accounts, no analytics, no tracking and no advertising. The only thing of yours that ever reaches us is feedback you choose to send — and it arrives without your name, your device or anything else that says who wrote it.</p>
 
-<p>That short version is the whole policy. The rest of this page explains what the app does instead, because “we collect nothing” is easy to write and worth being specific about.</p>
+<p>The rest of this page explains exactly what the app keeps, what it sends and to whom, because “we collect nothing” is easy to write and worth being specific about.</p>
 
 <h2>What stays on your phone</h2>
 <p>Everything the app remembers is stored locally on the device and never leaves it:</p>
@@ -25,10 +25,10 @@
   <li>a note of whether the one-time unlock has been purchased, so the app works offline;</li>
   <li>a random identifier the app generates on first launch, for example <code>wbl-3f2ab19c…</code>. It is created on the device, it is not derived from anything about you or your phone, and its only job is to tell the purchase service that this install is the one that bought the unlock.</li>
 </ul>
-<p>Anything you type into the app — a word for Who Am I, a secret for 20 Questions — is held in memory for that round and is not written anywhere. Deleting the app deletes all of the above with it.</p>
+<p>Anything you type into a game — a word for Who Am I, a secret for 20 Questions — is held in memory for that round and is not written anywhere. The one exception is feedback: while you write it, the draft is saved on the phone so it is not lost if the app closes, and a message sent without a connection waits on the phone until it can go out. Deleting the app deletes all of the above with it.</p>
 
 <h2>What leaves your phone</h2>
-<p>The games themselves are fully offline: you can play the entire app in airplane mode. Two technical connections exist, and neither carries anything personal.</p>
+<p>The games themselves are fully offline: you can play the entire app in airplane mode. Two technical connections exist, and neither carries anything personal. A third happens only when you send feedback.</p>
 
 <h2>1. Purchases (Apple, and RevenueCat)</h2>
 <p>The one-time unlock is sold by Apple through the App Store. Apple handles the payment; we never see your name, email, Apple ID or card details.</p>
@@ -43,6 +43,18 @@
 <h2>2. Content updates (Expo)</h2>
 <p>New decks and fixes are delivered as content updates rather than full app releases. On launch the app asks Expo’s update service whether a newer version of the app’s content exists. That request carries the technical details any HTTP request carries — IP address, platform, app and runtime version — and nothing else. No identifier the app created is sent with it. See <a href="https://expo.dev/privacy" rel="noopener">Expo’s privacy policy</a>.</p>
 
+<h2>3. Feedback you send (Cloudflare)</h2>
+<p>At the end of a game you can write to us. Nothing is sent unless you press Send. The message goes to a small service of ours hosted on <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a>, and it carries exactly four things:</p>
+<ul>
+  <li>the text you wrote;</li>
+  <li>the app version, for example <code>1.0.3</code>;</li>
+  <li>the app’s language, for example <code>de</code>;</li>
+  <li>a random code made for that one message, so that a message resent after a dropped connection is not stored twice. A new code is made for every message, so two messages cannot be linked to each other or to your phone.</li>
+</ul>
+<p>We do not store your IP address, device, country or any identifier. Like any internet request, the message reaches Cloudflare with your IP address; the service uses it for a moment to stop the same address from sending more than a few messages a minute, and then forgets it. The service keeps no logs.</p>
+<p>Because the message carries nothing about who wrote it, we cannot reply to it. If you want an answer, write to us through <a href="support.html">Support</a> instead. Please don’t put your name, contact details or anything else personal into feedback — if you do, it is stored like the rest of the text.</p>
+<p>Feedback is kept for 180 days and then deleted automatically. It is read only by us, to fix and improve the app, and it is never shared or sold.</p>
+
 <h2>What we never do</h2>
 <ul>
   <li>No analytics or telemetry of any kind. There is no analytics library in the app — not Firebase, not Sentry, not anything else.</li>
@@ -54,10 +66,10 @@
 <p>The app does read the phone’s motion sensor, and only while a round of Charades is on screen: that is how tilting the phone down scores a word. The readings are used on the spot and stored nowhere.</p>
 
 <h2>Children</h2>
-<p>Wobl is rated 12+ and is meant for a table of friends. It does not knowingly collect personal information from anyone, of any age, because it does not collect personal information at all.</p>
+<p>Wobl is rated 12+ and is meant for a table of friends. It does not knowingly collect personal information from anyone, of any age. Feedback is the only thing that reaches us, and it carries nothing that identifies the person who wrote it.</p>
 
 <h2>Your data, and removing it</h2>
-<p>Because nothing personal is collected, there is nothing to export or correct. To remove everything the app has stored, delete the app from your device. If you would like the purchase record held by RevenueCat removed, write to us via <a href="support.html">Support</a> and we will ask them to delete it — note that this may prevent restoring the purchase later.</p>
+<p>To remove everything the app has stored on your phone, including an unsent feedback message, delete the app from your device. To have a feedback message you already sent deleted before the 180 days are up, write to us via <a href="support.html">Support</a> with a few words of it and roughly when you sent it — since it carries no name, that is how we find it — and we will delete it and confirm. If you would like the purchase record held by RevenueCat removed, write to us via <a href="support.html">Support</a> and we will ask them to delete it — note that this may prevent restoring the purchase later.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, the date at the top changes with it. If a future version of the app ever starts collecting something, that will be said here plainly, before it ships.</p>
