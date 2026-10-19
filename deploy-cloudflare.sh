@@ -11,6 +11,10 @@
 set -e
 out=$(mktemp -d)
 cp index.html terms.html privacy.html support.html style.css "$out/"
-sed -i '' -E 's/href="(terms|privacy|support)\.html"/href="\1"/g' "$out"/*.html
+# Wobl: Romantic Games — отдельное приложение, свои страницы в /romantic/
+# (адреса зашиты в src/config.ts приложения wobl-romantic).
+mkdir "$out/romantic"
+cp romantic/*.html "$out/romantic/"
+sed -i '' -E 's/href="(terms|privacy|support)\.html"/href="\1"/g' "$out"/*.html "$out"/romantic/*.html
 npx --yes wrangler@4 pages deploy "$out" --project-name wobl-legal --branch main --commit-dirty=true
 rm -rf "$out"
